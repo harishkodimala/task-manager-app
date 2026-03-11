@@ -1,52 +1,80 @@
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form";
 
 function AddTaskForm({ addNewTask }) {
 
-  const { handleSubmit, register, reset,setError,
-    formState: { errors }, } = useForm()
-    const onSubmitForm = (taskObj) => {
+  const {
+    handleSubmit,
+    register,
+    reset,
+    setError,
+    formState: { errors },
+  } = useForm();
 
-  const newTask = {
-    ...taskObj,
-    completed: false
-  }
+  const onSubmitForm = (taskObj) => {
+    const newTask = {
+      ...taskObj,
+      completed: false,
+    };
 
-  addNewTask(newTask) 
-  reset()
-}
- 
-
+    addNewTask(newTask);
+    reset();
+  };
 
   return (
-    <div className="border-2 rounded-3xl bg-cyan-400 p-10 text-center max-h-80">
-      <h1 className="text-shadow-black pb-5 text-2xl">Add New Task</h1>
+    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md">
 
-      <form onSubmit={handleSubmit(onSubmitForm)}>
+      <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 text-center mb-6">
+        Add New Task
+      </h2>
 
-        <input className="border-2 p-2 "
+      <form onSubmit={handleSubmit(onSubmitForm)} className="flex flex-col gap-4">
+
+        {/* Task Input */}
+        <input
+          className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           type="text"
-          {...register("taskName", {required:true,minLength:3})}
           placeholder="Add New Task"
+          {...register("taskName", { required: true, minLength: 3 })}
         />
-        {errors.taskName?.type === "required" && <p className="text-red-500">Task name is required</p>}
-        {errors.taskName?.type === "minLength" && <p className="text-red-500">Min length shd be 3</p>}
-        <br /><br />
 
-        <label htmlFor="priority" className="pr-2">Select Priority</label>
+        {errors.taskName?.type === "required" && (
+          <p className="text-red-500 text-sm">Task name is required</p>
+        )}
 
-        <select className="border-2" {...register("priority")}>
-          <option value="low">LOW</option>
-          <option value="medium">MEDIUM</option>
-          <option value="high">HIGH</option>
-        </select>
+        {errors.taskName?.type === "minLength" && (
+          <p className="text-red-500 text-sm">Minimum length should be 3</p>
+        )}
 
-        <br /><br />
+        {/* Priority */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
 
-        <button type="submit" className="border-2 p-2 m-1 bg-pink-500 rounded-3xl w-40">Add</button>
+          <label htmlFor="priority" className="text-gray-600">
+            Select Priority
+          </label>
+
+          <select
+            className="border rounded-lg p-2 w-full sm:w-auto focus:ring-2 focus:ring-indigo-400"
+            {...register("priority")}
+          >
+            <option value="low">LOW</option>
+            <option value="medium">MEDIUM</option>
+            <option value="high">HIGH</option>
+          </select>
+
+        </div>
+
+        {/* Button */}
+        <button
+          type="submit"
+          className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition"
+        >
+          Add Task
+        </button>
 
       </form>
+
     </div>
-  )
+  );
 }
 
-export default AddTaskForm
+export default AddTaskForm;

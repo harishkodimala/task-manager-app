@@ -1,18 +1,45 @@
 function TasksCount({ tasks, deletedCount }) {
 
-  const totalTasks = tasks.length
-  const completedTasks = tasks.filter(task => task.completed).length
-  const pendingTasks = totalTasks - completedTasks
+  const totalTasks = tasks.length;
+  const completedTasks = tasks.filter(task => task.completed).length;
+  const pendingTasks = totalTasks - completedTasks;
 
   return (
-    <div className="border-2 rounded-2xl bg-orange-300 w-70 h-auto text-center p-6 max-h-60">
-      <h3 className="text-2xl pb-5">Tasks Count</h3>
 
-      <p className="p-2">Total Tasks: {totalTasks}</p>
-      <p className="p-2">Completed: {completedTasks}</p>
-      <p className="p-2">Pending: {pendingTasks}</p>
-      {/* <p className="p-2">Deleted: {deletedCount}</p> */}
-    </div>
+<div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md">
+
+<h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 text-center mb-6">
+Tasks Count
+</h2>
+
+<div className="space-y-3 text-gray-700">
+
+<p className="flex justify-between border-b pb-2">
+<span>Total Tasks</span>
+<span className="font-semibold">{totalTasks}</span>
+</p>
+
+<p className="flex justify-between border-b pb-2">
+<span>Completed</span>
+<span className="font-semibold text-green-600">{completedTasks}</span>
+</p>
+
+<p className="flex justify-between border-b pb-2">
+<span>Pending</span>
+<span className="font-semibold text-yellow-600">{pendingTasks}</span>
+</p>
+
+{/* Optional */}
+
+{/* <p className="flex justify-between">
+<span>Deleted</span>
+<span className="font-semibold text-red-500">{deletedCount}</span>
+</p> */}
+
+</div>
+
+</div>
+
   )
 }
 
