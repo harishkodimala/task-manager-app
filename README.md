@@ -25,15 +25,15 @@ A modern and responsive Task Manager application built to help users organize, m
 * HTML5
 * CSS3
 * JavaScript
-* React.js *(if used)*
-* Tailwind CSS *(if used)*
+* React.js 
+* Tailwind CSS 
 
-### Backend *(if applicable)*
+### Backend 
 
 * Node.js
 * Express.js
 
-### Database *(if applicable)*
+### Database
 
 * MongoDB
 
