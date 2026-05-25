@@ -4,21 +4,21 @@ A modern and responsive Task Manager application built to help users organize, m
 
 ---
 
-## 🚀 Features
+##  Features
 
-* ✅ Add new tasks
-* ✏️ Edit existing tasks
-* 🗑️ Delete tasks
-* 📌 Mark tasks as completed
-* 📋 Task organization
-* 🔍 Filter and manage tasks
-* 📱 Fully responsive design
-* ⚡ Fast and interactive UI
-* 🎨 Clean and modern interface
+*  Add new tasks
+*  Edit existing tasks
+*  Delete tasks
+*  Mark tasks as completed
+*  Task organization
+*  Filter and manage tasks
+*  Fully responsive design
+*  Fast and interactive UI
+*  Clean and modern interface
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 
@@ -39,7 +39,7 @@ A modern and responsive Task Manager application built to help users organize, m
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 task-manager-app/
@@ -63,7 +63,7 @@ task-manager-app/
 
 ---
 
-## 💻 Installation & Setup
+##  Installation & Setup
 
 ### Clone the Repository
 
@@ -79,7 +79,7 @@ cd task-manager-app
 
 ---
 
-## ▶️ Frontend Setup
+##  Frontend Setup
 
 ```bash
 cd frontend
@@ -95,7 +95,7 @@ http://localhost:5173
 
 ---
 
-## ▶️ Backend Setup
+##  Backend Setup
 
 ```bash
 cd backend
@@ -111,7 +111,7 @@ http://localhost:5000
 
 ---
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 Create a `.env` file inside the backend folder.
 
@@ -125,19 +125,19 @@ JWT_SECRET=your_secret_key
 
 ---
 
-## 📱 Responsive Design
+##  Responsive Design
 
 This application is optimized for:
 
-* Desktop 💻
-* Tablet 📱
-* Mobile 📲
+* Desktop 
+* Tablet 
+* Mobile 
 
 The UI automatically adjusts across different screen sizes for a seamless experience.
 
 ---
 
-## 🎯 Project Goals
+##  Project Goals
 
 This project was built to practice and improve:
 
@@ -152,7 +152,7 @@ This project was built to practice and improve:
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 Add your screenshots here.
 
@@ -164,7 +164,7 @@ Example:
 
 ---
 
-## 🌟 Future Improvements
+##  Future Improvements
 
 * Drag and drop task management
 * Task priority levels
@@ -177,7 +177,7 @@ Example:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome.
 
@@ -207,28 +207,14 @@ git push origin feature-name
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Created by **Harish Kodimala**
 
-Repository:
-GitHub
 
-Project Link:
-[https://github.com/harishkodimala/task-manager-app](https://github.com/harishkodimala/task-manager-app)
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub! 🚀
-
-Project inspiration and task management app feature references were reviewed from similar open-source repositories and task management projects. ([github.com][1])
-
-[1]: https://github.com/NisreenSalameh/tasksmanager?utm_source=chatgpt.com "Task Manager App"
